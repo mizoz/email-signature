@@ -2,7 +2,7 @@
 
 Free email signature generator for Gmail, Outlook and Apple Mail. No watermark, no sign-up.
 
-**Live:** https://mizoz.github.io/email-signature/
+**Live:** https://lab.zalastack.com/email-signature/
 
 ![Screenshot of the email signature generator](docs/screenshot.png)
 

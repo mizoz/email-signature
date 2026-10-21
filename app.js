@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const LIVE = 'https://mizoz.github.io/email-signature/';
+  const LIVE = 'https://lab.zalastack.com/email-signature/';
   const KEY = 'email-signature:v1';
   const GMAIL_LIMIT = 10000;
 

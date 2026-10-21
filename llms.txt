@@ -2,7 +2,7 @@
 
 > Free email signature generator for Gmail, Outlook and Apple Mail. Builds table-based, inline-styled HTML signatures plus a plain text version. 8 templates, no watermark, no sign-up. Runs entirely in the browser; nothing is uploaded.
 
-URL: https://mizoz.github.io/email-signature/
+URL: https://lab.zalastack.com/email-signature/
 
 ## What it does
 - Fields: name, pronouns, job title, company, phone, mobile, email, website, address, photo and logo (by https link), LinkedIn, X, Instagram, Facebook, YouTube, TikTok, GitHub, call to action line, legal disclaimer, accent and text colour, email-safe font.
@@ -26,4 +26,4 @@ URL: https://mizoz.github.io/email-signature/
 | iPhone / iPad Mail | Settings > Apps > Mail > Signature |
 
 ## Author
-Ahmed Mahmoud, Calgary, Alberta. Founder of FirstShow (https://firstshow.ca). Builds free web tools for marketers, event and comms teams. https://mizoz.github.io/
+Ahmed Mahmoud, Calgary, Alberta. Founder of FirstShow (https://firstshow.ca). Builds free web tools for marketers, event and comms teams. https://lab.zalastack.com/
