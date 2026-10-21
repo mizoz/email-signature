@@ -1,0 +1,29 @@
+# Email Signature Generator
+
+> Free email signature generator for Gmail, Outlook and Apple Mail. Builds table-based, inline-styled HTML signatures plus a plain text version. 8 templates, no watermark, no sign-up. Runs entirely in the browser; nothing is uploaded.
+
+URL: https://mizoz.github.io/email-signature/
+
+## What it does
+- Fields: name, pronouns, job title, company, phone, mobile, email, website, address, photo and logo (by https link), LinkedIn, X, Instagram, Facebook, YouTube, TikTok, GitHub, call to action line, legal disclaimer, accent and text colour, email-safe font.
+- Templates: Photo + divider, Classic, Compact, Photo on top, Logo right, Accent bar, Centered, Plain minimal (no images).
+- Output: Copy signature (rich HTML to the clipboard so it pastes formatted), copy HTML source, copy plain text, download .html, shareable settings link.
+- Settings autosave in the browser's local storage.
+
+## Key facts
+| Item | Value |
+|---|---|
+| Gmail signature limit | 10,000 characters (Google help) |
+| Recommended width | under 600 px |
+| Recommended headshot | 80 to 100 px shown, about 200 px uploaded |
+| Recommended logo | up to 200 px wide, about 60 px tall |
+| Social icons | 20 to 24 px |
+| Images | must be hosted on https; base64 images are stripped by Gmail and blocked or attached by Outlook |
+| Gmail (computer) | Settings > See all settings > General > Signature |
+| New Outlook / Outlook on the web | Settings > Accounts > Signatures |
+| Classic Outlook (Windows) | New email > Message > Signature > Signatures |
+| Apple Mail (Mac) | Mail > Settings > Signatures |
+| iPhone / iPad Mail | Settings > Apps > Mail > Signature |
+
+## Author
+Ahmed Mahmoud, Calgary, Alberta. Founder of FirstShow (https://firstshow.ca). Builds free web tools for marketers, event and comms teams. https://mizoz.github.io/

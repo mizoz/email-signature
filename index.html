@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Email Signature Generator for Gmail and Outlook</title>
+<meta name="description" content="Free email signature generator. Make an HTML signature for Gmail, Outlook and Apple Mail. 8 templates, no watermark, no sign-up, nothing uploaded.">
+<link rel="canonical" href="https://mizoz.github.io/email-signature/">
+<meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Email Signature Generator (no watermark, no sign-up)">
+<meta property="og:description" content="Make an HTML email signature for Gmail, Outlook and Apple Mail. Copy, paste, done.">
+<meta property="og:url" content="https://mizoz.github.io/email-signature/">
+<meta property="og:image" content="https://mizoz.github.io/email-signature/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Email Signature Generator: free HTML signatures for Gmail, Outlook and Apple Mail">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Email Signature Generator (no watermark, no sign-up)">
+<meta name="twitter:description" content="Make an HTML email signature for Gmail, Outlook and Apple Mail. Copy, paste, done.">
+<meta name="twitter:image" content="https://mizoz.github.io/email-signature/og.png">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Email Signature Generator",
+      "url": "https://mizoz.github.io/email-signature/",
+      "description": "Free email signature generator for Gmail, Outlook and Apple Mail. Table-based HTML signatures with 8 templates, a plain-text version, no watermark and no sign-up. Runs entirely in the browser.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "datePublished": "2026-10-21",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"},
+      "author": {"@type":"Person","name":"Ahmed Mahmoud","url":"https://mizoz.github.io/","jobTitle":"Founder, FirstShow","address":{"@type":"PostalAddress","addressLocality":"Calgary","addressRegion":"AB","addressCountry":"CA"},"sameAs":["https://github.com/mizoz","https://www.linkedin.com/in/ahmed-m-82ba28169/","https://firstshow.ca"]}
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to make an HTML email signature and add it to Gmail or Outlook",
+      "step": [
+        {"@type": "HowToStep", "name": "Pick a template", "text": "Choose one of the 8 templates. Photo + divider is a good default; Plain minimal has no images at all."},
+        {"@type": "HowToStep", "name": "Fill in your details", "text": "Add your name, title, company, phone, email and website. Paste https links for a photo or logo and add social profiles."},
+        {"@type": "HowToStep", "name": "Copy the signature", "text": "Click Copy signature. It copies formatted HTML, so it pastes with layout, links and images intact."},
+        {"@type": "HowToStep", "name": "Paste it into your mail app", "text": "Open the signature settings in Gmail, Outlook or Apple Mail, paste into the signature box and save."}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is this email signature generator really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. No sign-up, no watermark, no \"made with\" link in your signature, no trial. It runs in your browser and nothing you type is sent anywhere."}},
+        {"@type": "Question", "name": "Why does my photo or logo need to be a link?", "acceptedAnswer": {"@type": "Answer", "text": "An email signature is HTML, and the image is loaded from a URL every time someone opens your email. Images embedded as base64 data get stripped by Gmail and are blocked or turned into attachments by Outlook. Upload the image somewhere public, like your website, and paste its https link."}},
+        {"@type": "Question", "name": "Why is my round photo square in Outlook?", "acceptedAnswer": {"@type": "Answer", "text": "Classic Outlook for Windows renders email with Word, which ignores CSS rounded corners. If the circle matters, crop the photo into a circle yourself and save it as a PNG with a transparent background. Then it looks round everywhere."}},
+        {"@type": "Question", "name": "How do I add an HTML signature to Gmail?", "acceptedAnswer": {"@type": "Answer", "text": "Click Copy signature, then in Gmail on a computer go to Settings, See all settings, General, Signature, create a new signature, paste into the box, choose it under Signature defaults and click Save Changes at the bottom. Don't paste the HTML source code; Gmail's box only takes formatted content."}},
+        {"@type": "Question", "name": "Will the signature work in the Gmail or Outlook phone apps?", "acceptedAnswer": {"@type": "Answer", "text": "Emails you send from a computer show the full HTML signature on any phone. Sending from the Gmail app uses a separate mobile signature that is plain text, so paste the plain text version there. Outlook mobile and iPhone Mail have their own signature settings too."}},
+        {"@type": "Question", "name": "What is the best size for an email signature?", "acceptedAnswer": {"@type": "Answer", "text": "Keep it under 600 pixels wide and around 4 to 7 lines of text. A headshot shown at 80 to 100 pixels and a logo up to about 200 pixels wide are plenty. Gmail caps signatures at 10,000 characters, and the tool shows your count."}},
+        {"@type": "Question", "name": "Can I use the social icons in my signature?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. They are simple letter icons I made for this tool, hosted on GitHub Pages, so they are free to use. They are not the official platform logos. If you'd rather avoid images completely, switch social links to text."}},
+        {"@type": "Question", "name": "Is my information saved or uploaded?", "acceptedAnswer": {"@type": "Answer", "text": "Nothing is uploaded. Your details are saved only in your own browser's local storage so they are there next time. The share link puts your settings in the part of the URL after the # sign, which browsers never send to the server."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#tool">Skip to the generator</a>
+<header class="top">
+  <div class="wrap">
+    <h1>Free Email Signature Generator</h1>
+    <p class="lede">Make a clean HTML email signature for Gmail, Outlook and Apple Mail. No watermark, no sign-up, and nothing you type leaves your browser.</p>
+  </div>
+</header>
+
+<main id="tool" class="wrap tool">
+  <form id="sig-form" class="panel form" autocomplete="on" novalidate>
+    <fieldset>
+      <legend>Template</legend>
+      <div id="templates" class="tpl-grid" role="radiogroup" aria-label="Signature template"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>You</legend>
+      <div class="grid2">
+        <label>Name <input name="name" autocomplete="name"></label>
+        <label>Pronouns <span class="opt">optional</span> <input name="pronouns" placeholder="she/her"></label>
+        <label>Job title <input name="title" autocomplete="organization-title"></label>
+        <label>Company <input name="company" autocomplete="organization"></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact</legend>
+      <div class="grid2">
+        <label>Phone <input name="phone" type="tel" autocomplete="tel"></label>
+        <label>Mobile <span class="opt">optional</span> <input name="mobile" type="tel"></label>
+        <label>Email <input name="email" type="email" autocomplete="email"></label>
+        <label>Website <input name="website" inputmode="url" placeholder="yourcompany.com"></label>
+      </div>
+      <label>Address <span class="opt">optional</span> <input name="address" autocomplete="street-address" placeholder="123 Main St, Calgary, AB"></label>
+      <label>Contact labels
+        <select name="labels">
+          <option value="letters">Letters (P, E, W)</option>
+          <option value="words">Words (Phone, Email)</option>
+          <option value="none">None</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Photo and logo</legend>
+      <p class="hint">Paste an <strong>https link</strong> to an image that's already online (your website, a CDN, your company's media library). Email apps load signature images from a URL each time the email is opened. Uploaded or base64-embedded images get stripped by Gmail and blocked or turned into attachments by Outlook, so this tool doesn't offer an upload button on purpose.</p>
+      <label>Photo URL <input name="photo" inputmode="url" placeholder="https://yoursite.com/headshot.png"></label>
+      <div class="grid2">
+        <label>Photo shape
+          <select name="photoShape">
+            <option value="round">Round</option>
+            <option value="rounded">Rounded corners</option>
+            <option value="square">Square</option>
+          </select>
+        </label>
+        <label>Photo size (px)
+          <select name="photoSize">
+            <option value="64">64</option>
+            <option value="80">80</option>
+            <option value="88">88</option>
+            <option value="100">100</option>
+            <option value="120">120</option>
+          </select>
+        </label>
+      </div>
+      <label>Logo URL <input name="logo" inputmode="url" placeholder="https://yoursite.com/logo.png"></label>
+      <label>Logo width (px)
+        <select name="logoWidth">
+          <option value="80">80</option>
+          <option value="100">100</option>
+          <option value="120">120</option>
+          <option value="140">140</option>
+          <option value="160">160</option>
+          <option value="200">200</option>
+        </select>
+      </label>
+      <ul id="warnings" class="warn" hidden></ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>Social links</legend>
+      <p class="hint">A username or a full link both work.</p>
+      <div class="grid2">
+        <label>LinkedIn <input name="linkedin" placeholder="username or link"></label>
+        <label>X <input name="x" placeholder="@handle"></label>
+        <label>Instagram <input name="instagram" placeholder="@handle"></label>
+        <label>Facebook <input name="facebook" placeholder="page name or link"></label>
+        <label>YouTube <input name="youtube" placeholder="@channel"></label>
+        <label>TikTok <input name="tiktok" placeholder="@handle"></label>
+        <label>GitHub <input name="github" placeholder="username"></label>
+        <label>Show as
+          <select name="socialStyle">
+            <option value="icons">Small icons</option>
+            <option value="text">Text links</option>
+          </select>
+        </label>
+      </div>
+      <label>Icon colour
+        <select name="iconColor">
+          <option value="slate">Slate</option>
+          <option value="black">Black</option>
+          <option value="gray">Gray</option>
+          <option value="blue">Blue</option>
+          <option value="teal">Teal</option>
+          <option value="red">Red</option>
+          <option value="purple">Purple</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Banner line and disclaimer</legend>
+      <div class="grid2">
+        <label>Call to action <span class="opt">optional</span> <input name="cta" placeholder="Book a call"></label>
+        <label>Call to action link <input name="ctaUrl" inputmode="url" placeholder="https://..."></label>
+      </div>
+      <label>Legal disclaimer <span class="opt">optional</span>
+        <textarea name="disclaimer" rows="3" placeholder="This email and any attachments are confidential..."></textarea>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Colours and font</legend>
+      <div class="grid2">
+        <div class="colour">
+          <label for="accent">Accent colour</label>
+          <div class="row"><input type="color" id="accent" name="accent"><input id="accent-hex" aria-label="Accent colour hex code" maxlength="7" spellcheck="false"></div>
+        </div>
+        <div class="colour">
+          <label for="text">Text colour</label>
+          <div class="row"><input type="color" id="text" name="text"><input id="text-hex" aria-label="Text colour hex code" maxlength="7" spellcheck="false"></div>
+        </div>
+        <label>Font <span class="opt">email-safe only</span>
+          <select name="font">
+            <option value="arial">Arial</option>
+            <option value="helvetica">Helvetica</option>
+            <option value="verdana">Verdana</option>
+            <option value="tahoma">Tahoma</option>
+            <option value="trebuchet">Trebuchet MS</option>
+            <option value="georgia">Georgia</option>
+            <option value="times">Times New Roman</option>
+            <option value="courier">Courier New</option>
+          </select>
+        </label>
+        <label>Text size (px)
+          <select name="size">
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+          </select>
+        </label>
+      </div>
+    </fieldset>
+    <div class="small-actions">
+      <button type="button" id="clear" class="link">Clear all fields</button>
+      <button type="button" id="reset" class="link">Back to the example</button>
+    </div>
+  </form>
+
+  <section class="panel out" aria-labelledby="pv-h">
+    <div class="sticky">
+      <h2 id="pv-h" class="pv-title">Preview</h2>
+      <div class="pv-tools">
+        <fieldset class="seg"><legend class="sr">Preview background</legend>
+          <label><input type="radio" name="pv-bg" value="light" checked> Light</label>
+          <label><input type="radio" name="pv-bg" value="dark"> Dark</label>
+        </fieldset>
+        <fieldset class="seg"><legend class="sr">Preview width</legend>
+          <label><input type="radio" name="pv-w" value="desktop" checked> Desktop</label>
+          <label><input type="radio" name="pv-w" value="mobile"> Phone</label>
+        </fieldset>
+      </div>
+      <div id="preview-frame" class="pv-frame">
+        <div class="pv-mail">
+          <p class="pv-body">Hi Sam,<br><br>Thanks for the quick reply. Talk soon.</p>
+          <div id="preview"></div>
+        </div>
+      </div>
+      <p id="size-note" class="note"></p>
+      <div class="actions">
+        <button type="button" id="copy-rich" class="primary">Copy signature</button>
+        <button type="button" id="copy-html">Copy HTML source</button>
+        <button type="button" id="copy-text">Copy plain text</button>
+        <button type="button" id="download">Download .html</button>
+        <button type="button" id="share">Copy share link</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <details>
+        <summary>HTML source</summary>
+        <label class="sr" for="html-out">HTML source</label>
+        <textarea id="html-out" rows="7" readonly spellcheck="false"></textarea>
+      </details>
+      <details>
+        <summary>Plain text version</summary>
+        <label class="sr" for="text-out">Plain text version</label>
+        <textarea id="text-out" rows="7" readonly spellcheck="false"></textarea>
+      </details>
+      <p class="privacy">Private by design: everything runs in your browser. Your details are saved only on this device so they're here next time. The share link keeps your settings after the <code>#</code>, which is never sent to a server.</p>
+    </div>
+  </section>
+</main>
+
+<article class="wrap content">
+  <section>
+    <h2>A free HTML email signature that pastes properly</h2>
+    <p>I wanted a signature generator that didn't ask for an email address, didn't sneak a "made with" link into my signature, and didn't lock the good templates behind a trial. So I made one. It builds old-school, table-based HTML with inline styles, which is what Gmail, Outlook (desktop, new and web), Apple Mail and phone mail apps all handle reliably. It also gives you a plain text version for places that don't take HTML.</p>
+  </section>
+
+  <section>
+    <h2>How to use it</h2>
+    <ol class="steps">
+      <li><strong>Pick a template.</strong> Photo + divider is a safe default. Plain minimal has no images at all, which is handy if your company's mail server strips them.</li>
+      <li><strong>Fill in your details.</strong> Leave anything blank and it disappears from the signature.</li>
+      <li><strong>Add images by link.</strong> Paste https links for a headshot or logo. See why below.</li>
+      <li><strong>Click Copy signature</strong> and paste it into your mail app's signature box using the steps for your app.</li>
+      <li><strong>Send yourself a test email</strong> and open it on your phone too.</li>
+    </ol>
+  </section>
+
+  <section id="install">
+    <h2>How to add your signature in Gmail, Outlook and Apple Mail</h2>
+    <p>Always use <strong>Copy signature</strong> (not the HTML source) for these. It copies formatted content, the same as copying from a web page. Menus below were checked against each app's help pages in October 2026.</p>
+    <div class="tabs" role="tablist" aria-label="Mail app">
+      <button role="tab" id="tab-gmail" aria-controls="p-gmail" aria-selected="true">Gmail</button>
+      <button role="tab" id="tab-newol" aria-controls="p-newol" aria-selected="false" tabindex="-1">New Outlook</button>
+      <button role="tab" id="tab-olweb" aria-controls="p-olweb" aria-selected="false" tabindex="-1">Outlook web</button>
+      <button role="tab" id="tab-classic" aria-controls="p-classic" aria-selected="false" tabindex="-1">Classic Outlook</button>
+      <button role="tab" id="tab-macmail" aria-controls="p-macmail" aria-selected="false" tabindex="-1">Apple Mail (Mac)</button>
+      <button role="tab" id="tab-ios" aria-controls="p-ios" aria-selected="false" tabindex="-1">iPhone / iPad</button>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p-gmail" aria-labelledby="tab-gmail">
+      <h3>Gmail signature (computer)</h3>
+      <ol>
+        <li>Click <strong>Copy signature</strong> above.</li>
+        <li>In Gmail, click the gear icon (top right), then <strong>See all settings</strong>.</li>
+        <li>On the <strong>General</strong> tab, scroll to <strong>Signature</strong> and click <strong>Create new</strong>. Give it a name.</li>
+        <li>Click in the signature box and paste (Ctrl+V or Cmd+V).</li>
+        <li>Under <strong>Signature defaults</strong>, pick it for new emails and for replies/forwards.</li>
+        <li>Scroll to the bottom and click <strong>Save Changes</strong>.</li>
+      </ol>
+      <p><strong>Gmail app on a phone:</strong> the app has its own "Mobile Signature" (Settings, then Signature settings) and it's text only. Use <strong>Copy plain text</strong> for that one. Emails you send from a computer still show the full signature on phones.</p>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p-newol" aria-labelledby="tab-newol" hidden>
+      <h3>New Outlook for Windows</h3>
+      <ol>
+        <li>Click <strong>Copy signature</strong> above.</li>
+        <li>In Outlook, click <strong>Settings</strong> (the gear icon), then <strong>Accounts</strong> &gt; <strong>Signatures</strong>.</li>
+        <li>If you have more than one account, choose the right one.</li>
+        <li>Click <strong>Add signature</strong>, name it, and paste into the editing box.</li>
+        <li>Pick it as the default for new messages and replies/forwards.</li>
+        <li>Click <strong>Save</strong>.</li>
+      </ol>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p-olweb" aria-labelledby="tab-olweb" hidden>
+      <h3>Outlook on the web (Outlook.com and Microsoft 365)</h3>
+      <ol>
+        <li>Click <strong>Copy signature</strong> above.</li>
+        <li>Click <strong>Settings</strong> (the gear icon at the top), then <strong>Accounts</strong> &gt; <strong>Signatures</strong>.</li>
+        <li>Click <strong>Add signature</strong>, name it, and paste into the editing box.</li>
+        <li>Choose your default signatures for new messages and replies/forwards.</li>
+        <li>Click <strong>Save</strong>.</li>
+      </ol>
+      <p>New Outlook and Outlook on the web share the same signature screen, so a signature you set up in one usually shows up in the other for the same account.</p>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p-classic" aria-labelledby="tab-classic" hidden>
+      <h3>Classic Outlook for Windows</h3>
+      <ol>
+        <li>Click <strong>Copy signature</strong> above.</li>
+        <li>In Outlook, open a new email.</li>
+        <li>On the <strong>Message</strong> tab, click <strong>Signature</strong> &gt; <strong>Signatures</strong>.</li>
+        <li>Under <strong>Select signature to edit</strong>, click <strong>New</strong> and name it.</li>
+        <li>Paste into the <strong>Edit signature</strong> box.</li>
+        <li>Under <strong>Choose default signature</strong>, pick the account and set it for new messages and replies/forwards.</li>
+        <li>Click <strong>OK</strong>.</li>
+      </ol>
+      <p>Classic Outlook ignores rounded corners, so round photos show square. Use a photo that's already cropped into a circle (transparent PNG) if that matters to you.</p>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p-macmail" aria-labelledby="tab-macmail" hidden>
+      <h3>Apple Mail on a Mac</h3>
+      <ol>
+        <li>Click <strong>Download .html</strong>, open the file in Safari, press Cmd+A then Cmd+C. (Copy signature from this page works too, but copying from Safari is the most reliable for Mail.)</li>
+        <li>In Mail, choose <strong>Mail</strong> &gt; <strong>Settings</strong>, then click <strong>Signatures</strong>.</li>
+        <li>Select your account in the left column.</li>
+        <li>Click the <strong>+</strong> button under the middle column and name the signature.</li>
+        <li>Untick <strong>Always match my default message font</strong>, otherwise Mail swaps your fonts.</li>
+        <li>Paste into the right column and close the window. Mail saves it right away.</li>
+      </ol>
+    </div>
+    <div class="tabpanel" role="tabpanel" id="p-ios" aria-labelledby="tab-ios" hidden>
+      <h3>iPhone and iPad Mail</h3>
+      <ol>
+        <li>Open this page on your iPhone, tap <strong>Copy signature</strong> (or email yourself the signature and copy it from that email).</li>
+        <li>Open <strong>Settings</strong> &gt; <strong>Apps</strong> &gt; <strong>Mail</strong> &gt; <strong>Signature</strong>. (On iOS 17 and older it's Settings &gt; Mail &gt; Signature.)</li>
+        <li>Choose <strong>All Accounts</strong> or <strong>Per Account</strong>, clear the default "Sent from my iPhone" and paste.</li>
+        <li>If the formatting collapses, shake the phone right after pasting and tap <strong>Undo Change Attributes</strong>. That restores the layout.</li>
+        <li>Tap back to save.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why images need to be hosted (and why base64 doesn't work)</h2>
+    <p>Your signature is a small piece of HTML. When someone opens your email, their mail app loads the photo, logo and icons from wherever they live online. That's why the image fields take a link.</p>
+    <p>Some generators embed the picture right inside the HTML as base64 data. It looks fine in the preview, then breaks: Gmail removes data images from signatures, Outlook often blocks them or turns them into attachments (hello, mystery "image001.png" on every email), and they bloat the message. Host the image on your own website or a media library you control, use https, and paste the direct image link. A quick test: open the link in a private window. If you see just the image, it'll work. If you see a Drive or Dropbox page, it won't.</p>
+    <p>The social icons in this tool are simple letter icons I made and host on GitHub Pages, so you can use them freely. They're intentionally not the official brand logos. If you want zero images, switch social links to text.</p>
+  </section>
+
+  <section>
+    <h2>Dark mode tips for email signatures</h2>
+    <ul>
+      <li><strong>Expect inverted colours.</strong> Outlook, Gmail's phone apps and Apple Mail can flip dark text to light and white backgrounds to dark. Use the Dark preview above to sanity-check.</li>
+      <li><strong>Use transparent PNG logos</strong> with a colour that reads on both light and dark. A navy logo on a transparent background disappears on dark grey. A thin white outline or a mid-tone colour fixes that.</li>
+      <li><strong>Skip big background colours.</strong> Coloured blocks get recoloured unpredictably. Thin accent lines like the dividers here hold up better.</li>
+      <li><strong>Don't put text inside images.</strong> Real text adjusts to dark mode; text baked into a JPG doesn't.</li>
+      <li><strong>Pick a mid-strength accent.</strong> Very dark or very light accents lose contrast on one of the two backgrounds.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What to put in an email signature</h2>
+    <ul>
+      <li><strong>Name, title, company.</strong> The basics. Pronouns are a nice touch if you use them.</li>
+      <li><strong>One or two ways to reach you.</strong> A phone and your website is plenty. Your email address is optional since they already have it, but it helps when emails get forwarded.</li>
+      <li><strong>A few social profiles,</strong> only the ones you actually use for work.</li>
+      <li><strong>One call to action,</strong> like booking a call or a current event. One, not three.</li>
+      <li><strong>A disclaimer</strong> only if your industry or employer requires one. Keep it short and small.</li>
+    </ul>
+    <p>Skip inspirational quotes, full mailing addresses (unless people visit you), and every certification you've earned.</p>
+  </section>
+
+  <section>
+    <h2>Email signature size best practices</h2>
+    <div class="table-wrap">
+      <table class="ref">
+        <caption>Recommended email signature sizes (2026)</caption>
+        <thead><tr><th scope="col">Element</th><th scope="col">Recommended</th><th scope="col">Why</th></tr></thead>
+        <tbody>
+          <tr><td>Total width</td><td>Under 600 px</td><td>Most email layouts and preview panes are about 600 px wide</td></tr>
+          <tr><td>Lines of text</td><td>4 to 7</td><td>Shorter signatures get read; long ones get skimmed past</td></tr>
+          <tr><td>Headshot</td><td>80 to 100 px shown, upload 2x (about 200 px)</td><td>2x keeps it sharp on high-res screens</td></tr>
+          <tr><td>Logo</td><td>Up to 200 px wide, about 60 px tall</td><td>Big enough to read, small enough not to dominate</td></tr>
+          <tr><td>Social icons</td><td>20 to 24 px</td><td>Tappable on phones without looking clunky</td></tr>
+          <tr><td>Image file size</td><td>Under about 50 KB each</td><td>Faster to load, less likely to be clipped or flagged</td></tr>
+          <tr><td>Font size</td><td>12 to 14 px, name a bit larger</td><td>Readable on phones without shouting</td></tr>
+          <tr><td>Gmail signature limit</td><td>10,000 characters (official)</td><td>Gmail refuses longer signatures; the tool shows your count</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">All sizes are recommendations except the Gmail limit, which comes from Google's own help page.</p>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details><summary>Is this email signature generator really free?</summary><p>Yes. No sign-up, no watermark, no "made with" link in your signature, no trial. It runs in your browser and nothing you type is sent anywhere.</p></details>
+    <details><summary>Why does my photo or logo need to be a link?</summary><p>An email signature is HTML, and the image is loaded from a URL every time someone opens your email. Images embedded as base64 data get stripped by Gmail and are blocked or turned into attachments by Outlook. Upload the image somewhere public, like your website, and paste its https link.</p></details>
+    <details><summary>Why is my round photo square in Outlook?</summary><p>Classic Outlook for Windows renders email with Word, which ignores CSS rounded corners. If the circle matters, crop the photo into a circle yourself and save it as a PNG with a transparent background. Then it looks round everywhere.</p></details>
+    <details><summary>How do I add an HTML signature to Gmail?</summary><p>Click Copy signature, then in Gmail on a computer go to Settings, See all settings, General, Signature, create a new signature, paste into the box, choose it under Signature defaults and click Save Changes at the bottom. Don't paste the HTML source code; Gmail's box only takes formatted content.</p></details>
+    <details><summary>Will the signature work in the Gmail or Outlook phone apps?</summary><p>Emails you send from a computer show the full HTML signature on any phone. Sending from the Gmail app uses a separate mobile signature that is plain text, so paste the plain text version there. Outlook mobile and iPhone Mail have their own signature settings too.</p></details>
+    <details><summary>What is the best size for an email signature?</summary><p>Keep it under 600 pixels wide and around 4 to 7 lines of text. A headshot shown at 80 to 100 pixels and a logo up to about 200 pixels wide are plenty. Gmail caps signatures at 10,000 characters, and the tool shows your count.</p></details>
+    <details><summary>Can I use the social icons in my signature?</summary><p>Yes. They are simple letter icons I made for this tool, hosted on GitHub Pages, so they are free to use. They are not the official platform logos. If you'd rather avoid images completely, switch social links to text.</p></details>
+    <details><summary>Is my information saved or uploaded?</summary><p>Nothing is uploaded. Your details are saved only in your own browser's local storage so they are there next time. The share link puts your settings in the part of the URL after the # sign, which browsers never send to the server.</p></details>
+  </section>
+
+  <p class="updated">Last updated October 2026.</p>
+</article>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Made by <a href="https://mizoz.github.io/">Ahmed Mahmoud in Calgary</a>. Source on <a href="https://github.com/mizoz/email-signature">GitHub</a>.</p>
+    <p class="more-h">More free tools</p>
+    <ul class="more">
+      <li><a href="https://mizoz.github.io/social-image-sizer/">Social image sizer</a></li>
+      <li><a href="https://mizoz.github.io/utm-builder/">UTM builder</a></li>
+      <li><a href="https://mizoz.github.io/post-preview/">Social post preview</a></li>
+      <li><a href="https://mizoz.github.io/sponsorship-builder/">Sponsorship tier builder</a></li>
+      <li><a href="https://mizoz.github.io/stream-calc/">Live stream bitrate calculator</a></li>
+      <li><a href="https://mizoz.github.io/alt-text-checker/">Alt text checker</a></li>
+      <li><a href="https://mizoz.github.io/run-of-show/">Run of show builder</a></li>
+      <li><a href="https://mizoz.github.io/email-signature/" aria-current="page">Email signature generator</a></li>
+      <li><a href="https://mizoz.github.io/og-preview/">Link preview and OG tags</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
